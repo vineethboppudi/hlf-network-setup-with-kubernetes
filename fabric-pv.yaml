@@ -1,0 +1,18 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: fabric-pv
+  labels:
+   name: fabricfiles
+
+spec:
+  capacity:
+    storage: 1Gi
+
+  accessModes:
+    - ReadWriteMany
+ 
+  hostPath:
+    path: "/home/msr/fabric-samples/kube-network/fabric"
+
+       
